@@ -13,11 +13,11 @@ const {
 //can come from any data source
 
 const customers=[
-    {id:1,name:'Dilip', email:'dilip@gmail.com',age:30},
-    {id:2,name:'Dilip1', email:'dilip1@gmail.com',age:31},
-    {id:3,name:'Dili2', email:'dilip2@gmail.com',age:32},
-    {id:4,name:'Dilip3', email:'dilip3@gmail.com',age:33},
-    {id:5,name:'Dilip4', email:'dilip4@gmail.com',age:34}
+    {id:'1',name:'Dilip', email:'dilip@gmail.com',age:30},
+    {id:'2',name:'Dilip1', email:'dilip1@gmail.com',age:31},
+    {id:'3',name:'Dili2', email:'dilip2@gmail.com',age:32},
+    {id:'4',name:'Dilip3', email:'dilip3@gmail.com',age:33},
+    {id:'5',name:'Dilip4', email:'dilip4@gmail.com',age:34}
 ];
 
 //Queries
@@ -28,7 +28,7 @@ const customers=[
 const Customer=new GraphQLObjectType({
     name:'Customer',
     fields:()=>({
-        id:{type:GraphQLInt},
+        id:{type:GraphQLString},
         name:{type:GraphQLString},
         email:{type:GraphQLString},
         age:{type:GraphQLInt}
@@ -42,13 +42,16 @@ const RootQuery=new GraphQLObjectType({
     fields:{
         customer:{
             type:Customer,
-            args:{id:GraphQLInt},
+            args:{
+                id:{type:GraphQLString}
+            },
             resolve(parentValue,args){
-                for (const customer in customers) {
-                    if(customer.id==args.id){
-                        return customer;
+                for(let i=0;i<customers.length;i++){
+                    if(customers[i].id===args.id){
+                        return customers[i];
                     }
                 }
+                
             }
         }
     }

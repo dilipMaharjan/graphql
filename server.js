@@ -10,8 +10,8 @@ app.use('/graphql',expressGraphQL({
     graphiql:true
 }));
 
-app.listen(3032,()=>{
-console.log("Server is running at port 3032 .....")
+app.listen(4000,()=>{
+console.log("Server is running at port 4000 .....")
 });
 
 
