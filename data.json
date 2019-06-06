@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "Dilip",
+      "email": "dilip@gmail.com",
+      "age": 30
+    },
+    {
+      "id": "2",
+      "name": "Dilip1",
+      "email": "dilip1@gmail.com",
+      "age": 31
+    },
+    {
+      "id": "3",
+      "name": "Dili2",
+      "email": "dilip2@gmail.com",
+      "age": 32
+    },
+    {
+      "id": "4",
+      "name": "Dilip3",
+      "email": "dilip3@gmail.com",
+      "age": 33
+    },
+    {
+      "id": "5",
+      "name": "Dilip4",
+      "email": "dilip4@gmail.com",
+      "age": 34
+    },
+    {
+      "id": "6",
+      "name": "Dilip5",
+      "email": "dilip5@gmail.com",
+      "age": 35
+    }
+  ]
+}
